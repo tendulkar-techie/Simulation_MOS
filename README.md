@@ -20,20 +20,16 @@ A C++ simulation of a multiprogramming operating system implementing a virtual m
 
 ## How It Works
 
-1. **`LOAD()`** reads `input.txt` card by card — `$AMJ` initializes a job, program lines are loaded into memory word by word, `$DTA` triggers execution, `$END` moves to the next job.
-2. **`EXECUTEUSERPROGRAM()`** runs the fetch-decode-execute cycle, checking TTL each cycle.
-3. **`MOS()`** handles system interrupts: `SI=1` → read, `SI=2` → write (checks TLL), `SI=3` → terminate.
+1. `LOAD()` reads `input.txt` card by card — `$AMJ` initializes a job, program lines are loaded into memory word by word, `$DTA` triggers execution, `$END` moves to the next job.
+2. `EXECUTEUSERPROGRAM()` runs the fetch-decode-execute cycle, checking TTL each cycle.
+3. `MOS()` handles system interrupts: `SI=1` → read, `SI=2` → write (checks TLL), `SI=3` → terminate.
 
 ### Job Deck Format
-```
 $AMJjjjjttttllll    ← Job ID, Time Limit, Line Limit
 <program lines>     ← Instructions as packed 4-char words
 $DTA                ← Triggers execution
 <data lines>        ← Read at runtime by GD
 $END####
-```
-
----
 
 ## Jobs
 
@@ -52,19 +48,8 @@ $END####
 
 Each job's output is separated by **two blank lines**.
 
----
-
 ## Error Handling
 
 - **Time Limit Exceeded** — printed if `TTC > TTL`
 - **Line Limit Exceeded** — printed if `LLC > TLL`
 
----
-
-## How to Run
-
-```bash
-g++ -std=c++17 -o OSphase1 OSphase1.cpp
-./OSphase1
-# output written to output.txt
-```
