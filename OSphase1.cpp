@@ -13,8 +13,8 @@ int JobID;
 int TTL, TLL; 
 int TTC = 0;         
 int LLC = 0;         
-ifstream fin("input.txt"); 
-ofstream fout("output.txt"); 
+ifstream fin("input_p1.txt"); 
+ofstream fout("output_p1.txt"); 
 char buffer[40]; 
 void INIT() 
 { 
