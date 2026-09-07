@@ -1,0 +1,33 @@
+HELLO WORLD OS PHASE2                   
+
+Program Executed Normally
+No Error — Successful Termination (Halt Instruction)
+
+
+Program Executed Abnormally
+Error: Out of Data — GD instruction found no data card
+LINE LIMIT TEST                         
+LINE LIMIT TEST                         
+
+
+Program Executed Abnormally
+Error: Line Limit Exceeded — LLC exceeded TLL
+LOTS OF DATA HERE                       
+MORE DATA HERE!                         
+
+
+Program Executed Abnormally
+Error: Time Limit Exceeded — TTC exceeded TTL
+
+
+Program Executed Abnormally
+Error: Operation Code Error — Invalid opcode encountered
+
+
+Program Executed Abnormally
+Error: Operand Error — Invalid operand in instruction
+NORMAL JOB SEVEN                        
+SECOND DATA LINE                        
+
+Program Executed Normally
+No Error — Successful Termination (Halt Instruction)
